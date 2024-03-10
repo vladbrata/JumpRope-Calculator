@@ -1,23 +1,26 @@
-﻿/*Dai input cate set-uri ai avut si el te intreaba cate secunde a durat fiecare set
-La final converteste timpul total de sarit din secunde in minute*/
+﻿using System.Dynamic;
+using System.Globalization;
 
-int setulCurent = 0;
-int secundeTotale = 0;
+Console.Clear();
+Console.WriteLine("\tJump Rope Calculator");
+Console.WriteLine("--------------------------------------");
 
-Console.WriteLine("Cate seturi?");
-int numarSeturi = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("1. Caclulate workout time.");
+Console.WriteLine("\tMore soon");
+Console.WriteLine("--------------------------------------");
+Console.Write("Select a functionality ");
 
-// for loop care ruleaza pana cand i este egal cu numarul de seturi impus de user
-/* spui programului cate secunde a durat set-ul
-secundele fiecarui set se stocheaza in variabila "secunde"
-in varibila "secundeTotale" se adauga valoare variabilei "secunde" dupa fiecare set*/
-for (int i = 0; i < numarSeturi; i++)
-{
-    Console.WriteLine($"Cate secunde a durat set-ul {++setulCurent}?");
-    int secunde = Convert.ToInt32(Console.ReadLine());
-    secundeTotale += secunde;
+int answer = JRCalculator.GetValidInput();
+
+switch (answer) {
+    case 1:
+        Console.Clear();
+        Console.WriteLine("How many sets?");
+        int setsNum = JRCalculator.GetValidInput();
+        JRCalculator jumpRopeCalc = new JRCalculator(setsNum);
+        double output = jumpRopeCalc.GetJumpTime();
+        jumpRopeCalc.PrintJumpTime();
+        break;
+    case 2:
+        break;
 }
-
-float minute = secundeTotale / 60f; // converteste secunde in minute
-
-Console.WriteLine($"Timp total de sarit: {minute} minute");

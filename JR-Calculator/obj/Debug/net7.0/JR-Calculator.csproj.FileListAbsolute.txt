@@ -1,0 +1,14 @@
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\bin\Debug\net7.0\JR-Calculator.exe
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\bin\Debug\net7.0\JR-Calculator.deps.json
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\bin\Debug\net7.0\JR-Calculator.runtimeconfig.json
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\bin\Debug\net7.0\JR-Calculator.dll
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\bin\Debug\net7.0\JR-Calculator.pdb
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\obj\Debug\net7.0\JR-Calculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\obj\Debug\net7.0\JR-Calculator.AssemblyInfoInputs.cache
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\obj\Debug\net7.0\JR-Calculator.AssemblyInfo.cs
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\obj\Debug\net7.0\JR-Calculator.csproj.CoreCompileInputs.cache
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\obj\Debug\net7.0\JR-Calculator.dll
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\obj\Debug\net7.0\refint\JR-Calculator.dll
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\obj\Debug\net7.0\JR-Calculator.pdb
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\obj\Debug\net7.0\JR-Calculator.genruntimeconfig.cache
+D:\Coding\CSharpProjects\JumpRope-Calculator\JR-Calculator\obj\Debug\net7.0\ref\JR-Calculator.dll
