@@ -1,15 +1,7 @@
 ﻿using System.Dynamic;
 using System.Globalization;
 
-Console.Clear();
-Console.WriteLine("\tJump Rope Calculator");
-Console.WriteLine("--------------------------------------");
-
-Console.WriteLine("1. Caclulate workout time.");
-Console.WriteLine("\tMore soon");
-Console.WriteLine("--------------------------------------");
-Console.Write("Select a functionality ");
-
+JRCalculator.PrintMenu();
 int answer = JRCalculator.GetValidInput();
 
 switch (answer) {

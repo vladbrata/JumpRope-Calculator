@@ -1,3 +1,4 @@
+using System.Diagnostics.Contracts;
 using System.Globalization;
 
 public class JRCalculator
@@ -9,13 +10,24 @@ public class JRCalculator
         time = new int[numberOfSets];
     }
 
+    public static void PrintMenu()
+    {
+        Console.Clear();
+        Console.WriteLine("\tJump Rope Calculator");
+        Console.WriteLine("--------------------------------------");
+
+        Console.WriteLine("1. Caclulate workout time.");
+        Console.WriteLine("\tMore soon");
+        Console.WriteLine("--------------------------------------");
+        Console.Write("Select a functionality ");
+    }
     public static int GetValidInput()
     {
         bool validInput = false;
-        int answer = 0;
+        int output = 0;
         while(!validInput) {
             string? input = Console.ReadLine();
-            validInput = int.TryParse(input, out answer);
+            validInput = int.TryParse(input, out output);
             if(validInput) validInput = true;
             else {
                 Console.WriteLine("Invalid choice!");
@@ -23,10 +35,11 @@ public class JRCalculator
                 
             }
         }
-        return answer;
+        return output;
     }
     public void GetSetsTime(ref int[] time)
     {
+        time = new int[numberOfSets];
         for(int i = 0; i < time.Length; i++) {
             int setCount = 1;
             Console.WriteLine($"How long did set number {setCount} set last?");
