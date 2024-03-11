@@ -5,5 +5,10 @@ JRCalculator jumpRopeCalc = new JRCalculator();
 
 jumpRopeCalc.PrintMenu();
 
-jumpRopeCalc.SelectFunctionality();
+int menu = jumpRopeCalc.SelectFunctionality();
 
+switch (menu) {
+    case 1:
+        jumpRopeCalc.FirstChoice();
+        break;
+}
