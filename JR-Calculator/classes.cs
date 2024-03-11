@@ -5,12 +5,12 @@ public class JRCalculator
 {
     int numberOfSets;
     int[] time;
-    public JRCalculator(int numberOfSets) 
+    double jumpTime;
+    public JRCalculator() 
     {
-        time = new int[numberOfSets];
     }
 
-    public static void PrintMenu()
+    public void PrintMenu()
     {
         Console.Clear();
         Console.WriteLine("\tJump Rope Calculator");
@@ -21,44 +21,69 @@ public class JRCalculator
         Console.WriteLine("--------------------------------------");
         Console.Write("Select a functionality ");
     }
-    public static int GetValidInput()
+    private static int GetValidInput()
     {
         bool validInput = false;
         int output = 0;
         while(!validInput) {
             string? input = Console.ReadLine();
             validInput = int.TryParse(input, out output);
-            if(validInput) validInput = true;
+            if (validInput) {
+                output = Convert.ToInt32(input);
+                break;
+            }
             else {
+            
                 Console.WriteLine("Invalid choice!");
                 Console.Write("Try again ");
-                
             }
         }
         return output;
     }
-    public void GetSetsTime(ref int[] time)
+    public double SelectFunctionality()
     {
-        time = new int[numberOfSets];
-        for(int i = 0; i < time.Length; i++) {
-            int setCount = 1;
+        int input = 0;
+        double output = 0;
+        // int sets = 0;
+        do {
+            input = GetValidInput();
+            switch (input) {
+            case 1:
+                numberOfSets = GetNumOfSets();
+                output = GetSetsTime(ref numberOfSets);
+                PrintJumpTime();
+                break;
+            case > 1:
+                Console.WriteLine("Coming soon!");
+                Console.WriteLine("Please select other functionalities");
+                break;
+            }
+        } while (input > 1);
+        
+        return output;
+    } 
+    private static int GetNumOfSets()
+    {
+        Console.Clear();
+        Console.WriteLine("How many sets?");
+        int sets = GetValidInput();
+        return sets;
+    }
+    public static double GetSetsTime(ref int sets)
+    {
+        int setCount = 1;
+        double jumpTime = 0;
+
+        for(int i = 0; i < sets; i++) {
             Console.WriteLine($"How long did set number {setCount} set last?");
-            int input = Convert.ToInt32(Console.ReadLine());
-            time[i] = input;
+            double input = Convert.ToDouble(Console.ReadLine());
+            jumpTime += input;
             setCount++;
         }
+        return jumpTime;
     }
-    public double GetJumpTime()
+    private void PrintJumpTime()
     {
-        GetSetsTime(ref time);
-        int finalTime = 0;
-        for(int i = 0; i < time.Length; i++) {
-            finalTime += time[i];
-        }
-        return finalTime;
-    }
-    public void PrintJumpTime()
-    {
-        Console.WriteLine($"Your total jump time is {GetJumpTime()} seconds");
+        Console.WriteLine($"Your total jump time is {GetSetsTime(ref numberOfSets)} seconds");
     }
 }
