@@ -71,7 +71,6 @@ public class JRCalculator
             Console.WriteLine($"How long did set number {setCount++} last? (in seconds)");
             input = GetValidInput();
             jumpTime += input;
-            Console.Clear();
         }
         return jumpTime;
     }
