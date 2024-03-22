@@ -1,18 +1,17 @@
 ﻿using System.Dynamic;
 using System.Globalization;
 
-JRCalculator jumpRopeCalc = new JRCalculator();
-
 // prints the user menu
-jumpRopeCalc.PrintMenu();
+JRCalculator.PrintMenu();
 
 // gets user choice about app functionality
-int menu = jumpRopeCalc.SelectFunctionality();
+int menu = JRCalculator.SelectFunctionality();
 
 switch (menu) {
     // for the first functionality of the problem
     case 1:
-        jumpRopeCalc.FirstChoice();
+        int numOfSets = JRCalculator.GetNumOfSets();
+        JRCalculator jumpRopeCalc = new JRCalculator(numOfSets);
         break;
     // the rest will soon appear
 }

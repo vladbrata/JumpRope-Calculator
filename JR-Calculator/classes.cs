@@ -3,11 +3,17 @@ using System.Globalization;
 
 public class JRCalculator
 {
-    public JRCalculator() 
+    int sets;
+    
+    public JRCalculator(int numOfSets) // prima alegere
     {
+        int jumpTime = GetJumpTime(numOfSets);
+        double finalJumpTime = SecondsToMinutes(jumpTime);
+        string? outputCalc = PrintJumpTime(finalJumpTime);
+        Console.WriteLine(outputCalc);
     }
 
-    public void PrintMenu()
+    public static void PrintMenu()
     {
         Console.Clear();
         Console.WriteLine("\tJump Rope Calculator");
@@ -38,7 +44,7 @@ public class JRCalculator
         // return the input converted to int
         return output;
     }
-    public int SelectFunctionality()
+    public static int SelectFunctionality()
     {
         int input = 0;
         // asks the user what they want to do inside the app
@@ -55,7 +61,7 @@ public class JRCalculator
         } while (input != 1);
         return input;
     }
-    private int GetNumOfSets() // (1) helper method that prompts the user for the total number of sets
+    public static int GetNumOfSets() // (1) helper method that prompts the user for the total number of sets
     {
         Console.Clear();
         Console.WriteLine("How many sets?");
@@ -78,18 +84,10 @@ public class JRCalculator
     {
         double finalJumpTime = Convert.ToDouble(jumpTimeSec);
         finalJumpTime /= 60;
-        // returns the total jump time in minutes
         return finalJumpTime;
     }
-    private void PrintJumpTime(double finalJumpTime) // (1) helper method that prints the final jumpt time
+    private string PrintJumpTime(double finalJumpTime) // (1) helper method that prints the final jumpt time
     {
-        Console.WriteLine($"Your total jump time is {finalJumpTime} minutes!");
-    }
-    public void FirstChoice() // Code for the first functionality of the app
-    {
-        int numOfSets = GetNumOfSets();
-        int jumpTime = GetJumpTime(numOfSets);
-        double finalJumpTime = SecondsToMinutes(jumpTime);
-        PrintJumpTime(finalJumpTime);
+        return $"Your total jump time is {finalJumpTime} minutes!";
     }
 }
