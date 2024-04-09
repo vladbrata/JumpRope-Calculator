@@ -88,6 +88,8 @@ public class JRCalculator
         }
         return jumpTime;
     }
+
+    // TODO time converter
     private double SecondsToMinutes(int jumpTimeSec) // (1) helper method that converts seconds into minutes
     {
         double finalJumpTime = Convert.ToDouble(jumpTimeSec);
