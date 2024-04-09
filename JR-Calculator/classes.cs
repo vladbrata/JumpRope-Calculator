@@ -3,11 +3,19 @@ using System.Globalization;
 
 public class JRCalculator
 {
-    int sets;
-    
-    public JRCalculator(int numOfSets) // prima alegere
+    private int sets;
+    public int Sets 
     {
-        int jumpTime = GetJumpTime(numOfSets);
+        get {return sets;}
+        set {
+            value = GetNumOfSets();
+            sets = value;
+        }
+    }
+    
+    public JRCalculator(int sets) // prima alegere
+    {
+        int jumpTime = GetJumpTime(sets);
         double finalJumpTime = SecondsToMinutes(jumpTime);
         string? outputCalc = PrintJumpTime(finalJumpTime);
         Console.WriteLine(outputCalc);
