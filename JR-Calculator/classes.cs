@@ -3,8 +3,7 @@ using System.Globalization;
 
 public class JRCalculator
 {
-    private int sets;
-    public int Sets 
+    public int sets 
     {
         get {return sets;}
         set {
